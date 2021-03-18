@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Documantation Page</title>
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="doc.css">
 </head>
 <body>
-    <nav id="nav-bar">
-        <header>C Documantation</header>
-        <a href="#introduction">Introduction</a>
-        <a href="#hello_world">Hello World</a>
-        <a href="#variables">Variables</a>
-        <a href="#declaring_varibles">Declaring variables</a>
-        <a href="#scanf_function">Scanf function</a>
-        <a href="#relational_operators">Relational Operators</a>
-        <a href="#logical_operators">Logical Operators</a>
-        <a href="#decision_structures">Decision structures</a>
-        <a href="#repeating_structures">Repeating Structures</a>
-        <a href="#vectors_and_arrays">Vectors and Arrays</a>
+    <nav id="nav-bar" class="scroll">
+        <header id="c_documentation">C Documentation</header>
+        <ul>
+            <li>
+            <a href="#introduction">Introduction</a></li>
+            <li><a href="#hello_world">Hello World</a></li>
+            <li><a href="#variables">Variables</a></li>
+            <li><a href="#declaring_varibles">Declaring variables</a></li>
+            <li><a href="#scanf_function">Scanf function</a></li>
+            <li><a href="#relational_operators">Relational Operators</a></li>
+            <li><a href="#logical_operators">Logical Operators</a></li>
+            <li><a href="#decision_structures">Decision structures</a></li>
+            <li><a href="#repeating_structures">Repeating Structures</a></li>
+            <li><a href="#vectors_and_arrays">Vectors and Arrays</a></li>
+            <li><a href="#reference">Reference</a></li>
+        </ul>
     </nav>
     <main id="main-doc">
         <section class="main-section">
@@ -36,11 +42,11 @@
         <section class="main-section">
             <header id="hello_world">Hello World</header>
             <p>To create your first C code, you must first include the <code>stdio.h</code> library, with which you can add simple features, such as printing, reading variables, etc.</p>
-            <code><pre>
+            <code class="code"><pre>
                 #include &lt;stdio.h&gt;
             </pre></code>
             <p>With that, we can write our first code that prints Hello World. Legend has it in the tech world that if your first code learning new technology isn't writing hello world, you'll never be able to learn it.</p>
-            <code><pre>
+            <code class="code"><pre>
                 int main(){
                     printf("Hello World!");
                 }
@@ -60,23 +66,23 @@
         <section class="main-section">
             <header id="declaring_varibles">Declaring variables</header>
             <p>To declare an integer variable</p>
-            <code><pre>
+            <code class="code"><pre>
                 int number;
             </pre></code>
             <p>To declare a variable and assign a value</p>
-            <code><pre>
+            <code class="code"><pre>
                 int number = 2;
             </pre></code>
             <p>To declare a variable with a floating point.</p>
-            <code><pre>
+            <code class="code"><pre>
                 float number = 2.2;
             </pre></code>
             <p>To declare a character</p>
-            <code><pre>
+            <code class="code"><pre>
                 char character = 'a';
             </pre></code>
             <p>To declare strings</p>
-            <code><pre>
+            <code class="code"><pre>
                 char string[10] = "music";
             </pre></code>
             <p>As a character occupies a memory space, to declare strings it is necessary to declare the equivalent length of the string minus one, since the last space allocates the null terminator <code>\0</code>.</p>
@@ -84,7 +90,7 @@
         <section class="main-section">
             <header id="scanf_function">SCANF function</header>
             <p>the scanf function is used to read values assigned by the user</p>
-            <code><pre>
+            <code class="code"><pre>
                 int num;
                 printf("Enter a number");
                 scanf("%d", &num);
@@ -117,7 +123,7 @@
         <section class="main-section">
             <header id="decision_structures">Decision structures</header>
             <p>Conditional operators allow the program to make a choice according to the given data</p>
-            <code><pre>
+            <code class="code"><pre>
                 int num1 = 3;
                 int num2 = 4;
                 if(num1 > num2){
@@ -128,7 +134,7 @@
             </pre></code>
             <p>In the code above you can see that we have two paths to be followed by the program, if num1 is greater than num2 then execute the first code, otherwise it executes another code.</p>
             <p>We also have the switch method</p>
-            <code><pre>
+            <code class="code"><pre>
                 int num1;
                 printf("Enter a number from 1 to 5");
                 scanf("%d", &num1);
@@ -159,7 +165,7 @@
             <p>The repetition structures are used to repeat the command more than once</p>
             <ul>
                 <li>for command</li>
-                <code><pre>
+                <code class="code"><pre>
                     int i;
                     for(i = 0; i &lt; 10; i++){
                         printf("Number %d", i);
@@ -168,7 +174,7 @@
                 <p>For this command it receives three parameters so to speak, a counter i that receives a value to start the count, a condition in which the operation will stop if the condition is false, and an incrementer to execute again. In the above case it will execute print Number 1, 2, 3 ... 10 times</p>
                 <li>command while</li>
                 <p>In this case it will repeat the operation n times as long as the operation is true</p>
-                <code><pre>
+                <code class="code"><pre>
                     int i = 0;
                     while(i &lt; 10){
                         printf("Number %d", i);
@@ -176,7 +182,7 @@
                 </pre></code>
                 <li>Command do..while</li>
                 <p>The while structure will execute at least once before testing whether the condition is true.</p>
-                <code><pre>
+                <code class="code"><pre>
                     int i = 0;
                     do{
                         printf("Number %d", i);
@@ -187,17 +193,31 @@
         <section class="main-section">
             <header id="vectors_and_arrays">Vectors and arrays</header>
             <p>It is common to create several variables, so we can store them in a single variable, the vectors.</p>
-            <code><pre>
+            <code class="code"><pre>
                 int vet[10] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
             </pre></code>
             <p>In the code above we created a vector that stores ten numbers</p>
             <p>Arrays</p>
             <p>arrays serve to create vectors of different dimensions.</p>
-            <code><pre>
+            <code class="code"><pre>
                 int array[10][10];
             </pre></code>
             <p>In the code above we created an array that stores numbers in ten rows and ten columns, that is, a matrix, so we can store a hundred numbers</p>
         </section>
+        <section  class="main-section">
+            <header id="reference">Reference</header>
+            <p>All the documentation in this page is taken form <a href="https://docs.microsoft.com/en-us/cpp/c-language/?view=msvc-160" target="_blank">Microsoft</a></p>
+        </section>
     </main>
+    <div class="toggle" onclick="toggleMenu()"></div>
+        <script type="text/javascript">
+            function toggleMenu(){
+                let nav = document.querySelector('#nav-bar');
+                let toggle = document.querySelector('.toggle');
+                nav.classList.toggle('active');
+                toggle.classList.toggle('active');
+            }
+        </script>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
